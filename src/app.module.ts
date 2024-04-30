@@ -9,7 +9,6 @@ import { PrismaService } from './prisma/prisma.service';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      debug: process.env.NODE_ENV !== 'production' ? true : false,
       playground: process.env.NODE_ENV !== 'production' ? true : false,
       typePaths: ['./graphql/schema/*.graphql'],
       definitions: {
