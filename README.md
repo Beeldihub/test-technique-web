@@ -44,25 +44,26 @@ Une fois les containers lancé. Il faut créer la structure du projet. Pour ce f
 
 # Travail à faire
 
-L’exercice consiste à créer une petite API d’équipement.
+L’exercice consiste à créer une API d’équipement.
 
 ## mutation
 
 ### Create
 
-Créer une mutation pour créer un équipement. Un équipement a un id, un nom, un manufacturer, sa consommation kwh et son cout.
+Créer une mutation pour créer un équipement. Un équipement a un id, un nom, un manufacturer, une consommation kwh et un cout.
+La consommation et le cout sont des entiers positifs. Le nom ne peut pas être vide.
 
-En base de données, il existe une relation one to many entre les manufacturer est les équipements. Un manufacturer peut donc avoir plusieurs équipements mais un équipement ne peut avoir qu’un manufacturer.
+En base de données, il existe une relation one to many entre les manufacturers et les équipements. Un manufacturer peut donc avoir plusieurs équipements mais un équipement ne peut avoir qu’un manufacturer.
 
 ### Update
 
-Créer une mutation pour mettre à jour un équipement. La mise à jour permet de modifier le kwh, le cout et le nom de l’équipement, mais pas le manufacturer ni l’id de d’équipement.
+Créer une mutation pour mettre à jour un équipement. La mise à jour permet de modifier le kwh, le cout, le nom de l’équipement et le manufacturer. On peut mettre à jour le cout uniquement s'il n'est pas renseigné.
 
 ## Query
 
 ### ListEquipments
 
-Cette query permet de récupérer l’ensemble des équipements présent dans la base de données.
+Cette query permet de récupérer l’ensemble des équipements présent dans la base de données. La query doit permettre de filtrer par manufacturer.
 
 ### Equipment($id)
 
